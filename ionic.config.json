@@ -1,0 +1,7 @@
+{
+  "name": "unisaude",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
