@@ -42,7 +42,8 @@ export class Tab1Page {
       },
       options: {
         indexAxis: 'y', 
-        responsive: true,
+        responsive: false, 
+        maintainAspectRatio: false,
         plugins: {
           title: {
             display: true,
@@ -90,7 +91,8 @@ export class Tab1Page {
             beginAtZero: true
           },
         },
-        responsive: true,
+        responsive: false, 
+        maintainAspectRatio: false,
         plugins: {
           title: {
             display: true,
@@ -133,7 +135,13 @@ export class Tab1Page {
             beginAtZero: true
           },
         },
-        responsive: true,
+        responsive: false, 
+        maintainAspectRatio: false,
+        layout: {
+          padding: {
+              bottom: 100  
+          }
+      },
         plugins: {
           title: {
             display: true,
