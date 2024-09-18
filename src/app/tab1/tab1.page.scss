@@ -6,7 +6,7 @@ ion-content {
 }
 
 .image-container {
-  height: 25vh;              // 25% of the viewport height
+  height: 15vh;              // 25% of the viewport height
   width: 100vw;              // 100% of the viewport width
   display: flex;
   justify-content: center;
@@ -22,16 +22,16 @@ ion-content {
 
 
 #canvasAnaliseDados {
-  width: 900px; 
-  height: 900px; 
+  width: 90vw; 
+  min-height: 500px;
 }
 
 #canvasPesoAtividade {
-  width: 900px; 
-  height: 900px; 
+  width: 90vw; 
+  min-height: 500px;
 }
 
 #canvasAtividadeDiaSemana {
-  width: 900px; 
-  height: 900px; 
+  width: 90vw; 
+  min-height: 500px;
 }
