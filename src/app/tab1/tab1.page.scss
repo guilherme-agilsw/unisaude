@@ -1,0 +1,21 @@
+ion-content {
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+}
+
+.image-container {
+  height: 25vh;              // 25% of the viewport height
+  width: 100vw;              // 100% of the viewport width
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;          // Ensure the image doesn’t overflow the container
+}
+
+.top-image {
+  width: 100%;               // Make the image fill horizontally
+  height: 100%;              // Ensure it also fills vertically within the container
+  object-fit: fill;         // Cover the container while maintaining the image's aspect ratio
+}
