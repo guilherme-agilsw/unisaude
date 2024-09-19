@@ -11,7 +11,7 @@ export class Tab1Page {
   chartPesoAtividade: any = [];
   chartAnaliseDados: any = [];
   chartAtividadeDiaSemana: any = [];
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
 
@@ -22,13 +22,13 @@ export class Tab1Page {
         datasets: [
           {
             label: 'Pressão Arterial',
-            data: [ 120, 115, 122, 118, 125, 119, 121, 116, 123, 117, 124, 120],
+            data: [120, 115, 122, 118, 125, 119, 121, 116, 123, 117, 124, 120],
             borderColor: "#53aa76",
             backgroundColor: "#53aa76",
           },
           {
             label: 'Batimentos',
-            data: [ 68, 75, 70, 78, 69, 74, 67, 73, 66, 76, 68, 75 ],
+            data: [68, 75, 70, 78, 69, 74, 67, 73, 66, 76, 68, 75],
             borderColor: "#7fb6fa",
             backgroundColor: "#7fb6fa",
           },
@@ -41,8 +41,28 @@ export class Tab1Page {
         ],
       },
       options: {
-        indexAxis: 'y', // <-- here
-        responsive: true
+        indexAxis: 'y', 
+        responsive: true, 
+        maintainAspectRatio: false,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Análise de Dados', 
+            font: {
+                size: 18, 
+                family: 'Arial', 
+                weight: 'bold' 
+            },
+            padding: {
+                top: 10, 
+                bottom: 20 
+            },
+            align: 'start', 
+        },
+          legend: {
+            position: 'bottom' 
+          }
+        },
       },
     });
 
@@ -59,7 +79,7 @@ export class Tab1Page {
           },
           {
             label: 'Atividade Física(minutos)',
-            data: [ 65, 55, 50, 48, 45, 44, 40, 36, 32, 21, 20, 23  ],
+            data: [65, 55, 50, 48, 45, 44, 40, 36, 32, 21, 20, 23],
             borderColor: "#007fff",
             backgroundColor: "#007fff",
           }
@@ -71,11 +91,31 @@ export class Tab1Page {
             beginAtZero: true
           },
         },
-        responsive:true
+        responsive: true, 
+        maintainAspectRatio: false,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Peso X Atividade Física', 
+            font: {
+                size: 18, 
+                family: 'Arial', 
+                weight: 'bold' 
+            },
+            padding: {
+                top: 10, 
+                bottom: 20 
+            },
+            align: 'start', 
+        },
+          legend: {
+            position: 'bottom' 
+          }
+        },
       },
     });
 
-    
+
     this.chartAtividadeDiaSemana = new Chart('canvasAtividadeDiaSemana', {
       type: 'bar',
       data: {
@@ -83,11 +123,45 @@ export class Tab1Page {
         datasets: [
           {
             label: 'Tempo Atividade (minutos)',
-            data: [ 120, 115, 122, 118, 125, 119, 121, 116, 123, 117, 124, 120],
+            data: [120, 115, 122, 118, 125, 119, 121, 116, 123, 117, 124, 120],
             borderColor: "#8f6599",
             backgroundColor: "#8f6599",
           }
         ]
-      }});
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          },
+        },
+        responsive: true, 
+        maintainAspectRatio: false,
+        layout: {
+          padding: {
+              bottom: 100  
+          }
+      },
+        plugins: {
+          title: {
+            display: true,
+            text: 'Atividades por dia da Semana', 
+            font: {
+                size: 18, 
+                family: 'Arial', 
+                weight: 'bold' 
+            },
+            padding: {
+                top: 10, 
+                bottom: 20 
+            },
+            align: 'start', 
+        },
+          legend: {
+            position: 'bottom' 
+          }
+        },
+      }
+    });
   }
 }

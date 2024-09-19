@@ -69,3 +69,6 @@ testem.log
 .DS_Store
 Thumbs.db
 /.vs
+android/
+angular.json
+package-lock.json

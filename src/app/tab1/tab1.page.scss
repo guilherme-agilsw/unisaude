@@ -6,8 +6,9 @@ ion-content {
 }
 
 .image-container {
-  height: 25vh;              // 25% of the viewport height
+  height: 15vh;              // 25% of the viewport height
   width: 100vw;              // 100% of the viewport width
+  max-width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,4 +19,20 @@ ion-content {
   width: 100%;               // Make the image fill horizontally
   height: 100%;              // Ensure it also fills vertically within the container
   object-fit: fill;         // Cover the container while maintaining the image's aspect ratio
+}
+
+
+#canvasAnaliseDados {
+  width: 90vw; 
+  min-height: 500px;
+}
+
+#canvasPesoAtividade {
+  width: 90vw; 
+  min-height: 500px;
+}
+
+#canvasAtividadeDiaSemana {
+  width: 90vw; 
+  min-height: 500px;
 }
