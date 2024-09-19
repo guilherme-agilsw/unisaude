@@ -8,6 +8,7 @@ ion-content {
 .image-container {
   height: 15vh;              // 25% of the viewport height
   width: 100vw;              // 100% of the viewport width
+  max-width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
