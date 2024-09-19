@@ -1,9 +1,3 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
 
   <div class="image-container">
@@ -12,16 +6,20 @@
 
   <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
     <ion-item>
+      <ion-icon name="mail-outline" slot="start"></ion-icon>
       <ion-label position="floating">Email</ion-label>
       <ion-input type="email" formControlName="email" required></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Password</ion-label>
+      <ion-icon name="key-outline" slot="start"></ion-icon>
+      <ion-label position="floating">Senha</ion-label>
       <ion-input type="password" formControlName="password" required></ion-input>
     </ion-item>
 
-    <ion-button expand="full" type="submit" [disabled]="!loginForm.valid">Login</ion-button>
+    <div class="login-button-container">
+      <ion-button expand="full" type="submit" [disabled]="!loginForm.valid" class="login-button">Entrar</ion-button>
+    </div>
   </form>
 
   <ion-text color="danger" *ngIf="errorMessage">

@@ -19,3 +19,24 @@ ion-content {
   height: 100%;              // Ensure it also fills vertically within the container
   object-fit: fill;         // Cover the container while maintaining the image's aspect ratio
 }
+
+.login-button-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: start;     /* Center vertically */
+  height: 100vh;           /* Full viewport height */
+}
+
+.login-button {
+  height: 60px;            /* Set the height of the button */
+  line-height: 60px;       /* Align text vertically within the button */
+  padding: 0 20px;         /* Horizontal padding */
+  font-size: 16px;         /* Font size */
+  --border-radius: 8px;   /* Optional: border-radius to round corners */
+  --background: red;          /* Background color of the button */
+  --color: white;             /* Text color of the button */
+  --border-color: red;        /* Border color of the button */
+
+}
+
+
